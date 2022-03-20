@@ -1,9 +1,8 @@
 {
-    "extends": "fastify-tsconfig",
-    "compilerOptions": {
-      "noEmit": true
-    },
-    "include": [
-        "**/*.ts"
-    ]
+  "extends": "fastify-tsconfig",
+  "compilerOptions": {
+    "noEmit": true,
+    "target": "es6"
+  },
+  "include": ["**/*.ts"]
 }

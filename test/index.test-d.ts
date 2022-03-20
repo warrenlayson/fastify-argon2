@@ -1,13 +1,10 @@
-import fastify from 'fastify'
-import example from '..'
-import { expectType } from 'tsd'
+import Fastify from 'fastify'
+import argon2 from '../index'
 
-let app
-try {
-  app = fastify()
-  await app.ready()
-  app.register(example)
-  expectType<() => string>(app.exampleDecorator)
-} catch (err) {
-  console.error(err)
-}
+const app = Fastify({ logger: false })
+void app.register(argon2)
+
+void app.get('/', async (request) => {
+  const res = await request.argon2Hash('password')
+  return await request.argon2Verify('password', res)
+})
