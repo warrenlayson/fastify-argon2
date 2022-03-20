@@ -13,7 +13,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Install Dependencies
-      run: npm install --ignore-scripts
+    - name: Setup PNPM
+        # You may pin to the exact commit or the version.
+        # uses: pnpm/action-setup@35ab4267a1a21c8e8cb1c087cf1642e891ff57bd
+      uses: pnpm/action-setup@v2.2.1
+      with:
+        run_install: true
     - name: Test
-      run: npm run test
+      run: pnpm test
