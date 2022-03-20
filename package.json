@@ -1,7 +1,7 @@
 {
   "name": "fastify-argon2",
   "version": "1.0.0",
-  "description": "",
+  "description": "A argon2 fastify plugin",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -13,8 +13,23 @@
     "test:typescript": "tsd",
     "unit": "tap test/**/*.test.js"
   },
-  "keywords": [],
-  "author": "",
+  "bugs": {
+    "url": "https://github.com/warrenlayson/fastify-argon2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/warrenlayson/fastify-argon2.git"
+  },
+  "homepage": "https://github.com/warrenlayson/fastify-argon2#readme",
+  "keywords": [
+    "fastify",
+    "plugin",
+    "argon2",
+    "hash",
+    "password",
+    "security"
+  ],
+  "author": "Warren Layson",
   "license": "MIT",
   "types": "index.d.ts",
   "dependencies": {
