@@ -26,4 +26,18 @@ test('fastify-argon2', async (t) => {
       t.error(err, 'should not throw any error')
     }
   })
+
+  t.test('verify', async (t) => {
+    t.plan(1)
+    const fastify = await buildApp(t)
+    try {
+      await fastify.register(require('../index'))
+      const hash = await fastify.argon2.hash('password')
+      const result = await fastify.argon2.verify(hash, 'password')
+      t.ok(result, 'should verify a hash')
+    } catch (err) {
+      console.error(err)
+      t.error(err, 'should not throw any error')
+    }
+  })
 })
