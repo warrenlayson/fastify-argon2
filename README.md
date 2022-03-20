@@ -1,7 +1,6 @@
-# __MY_PLUGIN__
+# fastify-argon2
 
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)  ![CI workflow](__MY_PLUGIN_URL__
-/workflows/CI%20workflow/badge.svg)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)  ![CI workflow](github.com/warrenlayson/fastify-argon2/workflows/CI%20workflow/badge.svg)
 
 Supports Fastify versions `3.x`
 
